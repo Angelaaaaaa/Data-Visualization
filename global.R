@@ -1,22 +1,4 @@
 
-# ######################     M    ###################
-# arrests <- read.csv("BPD.csv")
-# 
-# condition   <- c("COMMON ASSAULT","TRESSPASSING", "DESTRUCTION OF PROPERTY","LARCENY","ASSAULT","CDS","BURGLARY","HANDGUN VIOLATION","ROBBERY","CDS POSSESSION","ARMED ROBBERY","2ND DEGREE ASSAULT","STOLEN AUTO","DOMESTIC ASSAULT","ASSAULT OF POLICE")
-# subset <- filter(arrests, arrests$ChargeDescription %in% condition)
-# 
-# cond <- c("Central","Eastern" ,"Northeastern", "Northern", "Northwestern", "Southeastern", "Southern", "Southwestern", "Western")
-# 
-# subset <- filter(subset, District %in% cond)
-# 
-# subset$Sex = factor(subset$Sex, labels = c("F" = "Female","M" ="Male"))
-# 
-# sf <- subset
-# sf$ChargeDescription<- "All"
-# 
-# subset <- rbind(sf, subset)
-# 
-
 
 
 #############   A    #############
@@ -89,35 +71,6 @@ p_offences <- subset(police_hours, police_hours$IncidentOffense %in% top.offence
 offence.label <- c("Common Assault","Cut","Narcotics","Narcotics(Outside)",
                    "Seizure","Shop-Lifting","Towed Vehicle")
 
-
-# ######### M2 ###############
-# 
-# arrests <- police
-# #arrests$ArrestTime <- as.POSIXct(strptime(as.character(arrests$ArrestTime), format = "%H:%M"))
-# 
-# arrests[arrests==""] <- NA
-# arrests <- na.omit(arrests)
-# arrests$date <- as.Date(arrests$ArrestDate, "%m/%d/%Y")
-# arrests$ArrestTime <- as.integer(arrests$ArrestTime)
-# 
-# 
-# arrests_subset_michelle <- subset(arrests, select =  c(District, Age, ArrestTime, Race, Sex,Post,Charge, date, ChargeDescription))
-# arrests_subset_michelle$District <- as.character(arrests_subset_michelle$District)
-# arrests_subset_michelle$Age <- as.numeric(arrests_subset_michelle$Age)
-# arrests_subset_michelle$ArrestTime <- as.numeric(arrests_subset_michelle$ArrestTime)
-# arrests_subset_michelle$Race <- as.character(arrests_subset_michelle$Race)
-# arrests_subset_michelle$Charge <- as.numeric(arrests_subset_michelle$Charge)
-# 
-# 
-# 
-# arrests_subset_michelle$Race = factor(arrests_subset_michelle$Race, labels = c("A" = "Asian","B" ="Black","I"= "Indian","U"= "Unknown","W"= "White"))
-# arrests_subset_michelle$Race = factor(arrests_subset_michelle$Race, levels = c("Black", "White", "Asian","Indian","Unknown"))
-# 
-# arrests_subset_michelle$District <- factor(arrests_subset_michelle$District, levels = c("Central","Eastern" ,"Northeastern", "Northern", "Northwestern", "Southeastern", "Southern", "Southwestern", "Western")) 
-# #Arrest$ArrestTime <- (Arrest$ArrestTime, labels = c("500" = "5 ", "1000" = "10 ", "1500" = "3 ", "2000" = "8 ")) 
-# 
-
-################# A ####################
 
 
 
